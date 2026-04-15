@@ -425,6 +425,13 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   transition: 0.3s ease;
 }
 
+.tools-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columns */
+  gap: 40px;
+  align-items: start;
+}
+
 .tool-badge img {
   width: 32px;
   height: 32px;
