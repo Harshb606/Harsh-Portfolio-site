@@ -413,6 +413,28 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   align-items: start;
   margin-top: 64px;
 }
+.tool-badge {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.tool-badge img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.tool-badge:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
 
 /* Profile Card */
 .profile-card {
