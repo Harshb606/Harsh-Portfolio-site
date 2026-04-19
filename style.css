@@ -1066,3 +1066,180 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   background: rgba(124,58,237,0.4);
   color: var(--white);
 }
+
+/* ================================================================
+   MORE WORK — INSTAGRAM BRANDS
+================================================================ */
+.more-work {
+  background: linear-gradient(180deg, var(--bg-base) 0%, #090712 50%, var(--bg-base) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.mw-bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+}
+.mw-glow-1 {
+  width: 480px; height: 480px;
+  background: radial-gradient(circle, rgba(124,58,237,0.18) 0%, transparent 70%);
+  top: -80px; right: -100px;
+}
+.mw-glow-2 {
+  width: 360px; height: 360px;
+  background: radial-gradient(circle, rgba(236,72,153,0.12) 0%, transparent 70%);
+  bottom: -60px; left: -80px;
+}
+
+/* Brand Cards Grid */
+.ig-brands-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* Individual Brand Card */
+.ig-brand-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 20px;
+  border-radius: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+  text-decoration: none;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.32s ease,
+    border-color 0.32s ease;
+}
+
+/* Shimmer sweep on hover */
+.ig-brand-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(168,85,247,0.06) 40%,
+    rgba(236,72,153,0.06) 60%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+.ig-brand-card:hover::before {
+  transform: translateX(100%);
+}
+
+.ig-brand-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+  box-shadow:
+    0 8px 32px rgba(124,58,237,0.25),
+    0 0 0 1px rgba(168,85,247,0.2),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+/* Left side: icon + text */
+.ig-card-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+/* Instagram icon wrapper */
+.ig-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.ig-brand-card:hover .ig-icon-wrap {
+  background: rgba(124,58,237,0.12);
+  transform: scale(1.08);
+}
+.ig-icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+/* Text block */
+.ig-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.ig-handle {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.3s ease;
+}
+.ig-brand-card:hover .ig-handle {
+  color: var(--purple-light);
+}
+.ig-niche {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--white-50);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+/* Arrow icon */
+.ig-arrow {
+  font-size: 1rem;
+  color: var(--white-20);
+  flex-shrink: 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.ig-brand-card:hover .ig-arrow {
+  color: var(--purple-light);
+  transform: translate(2px, -2px);
+}
+
+/* Responsive — More Work */
+@media (max-width: 1100px) {
+  .ig-brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .ig-brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .ig-brand-card {
+    padding: 14px 16px;
+  }
+}
+@media (max-width: 420px) {
+  .ig-brands-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
