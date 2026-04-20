@@ -82,6 +82,26 @@ filterBtns.forEach(btn => {
   });
 });
 
+<script>
+const video = document.getElementById("myVideo");
+const playBtn = document.getElementById("playBtn");
+
+playBtn.addEventListener("click", () => {
+  video.play();
+  playBtn.classList.add("hide"); // hide button
+});
+
+// jab video pause ho → button wapas dikhe
+video.addEventListener("pause", () => {
+  playBtn.classList.remove("hide");
+});
+
+// jab video end ho → button wapas dikhe
+video.addEventListener("ended", () => {
+  playBtn.classList.remove("hide");
+});
+</script>
+
 /* ── Smooth anchor scrolling (fallback for older browsers) ── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
