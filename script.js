@@ -82,7 +82,6 @@ filterBtns.forEach(btn => {
   });
 });
 
-
 /* ── Smooth anchor scrolling (fallback for older browsers) ── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
