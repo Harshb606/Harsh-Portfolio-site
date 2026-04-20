@@ -731,32 +731,8 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 .portfolio-thumb:hover .portfolio-overlay {
   opacity: 1;
 }
-.play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #a855f7, #ec4899);
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-  
-  animation: playPulse 1.5s infinite;
-  transition: 0.3s;
-}
-.play-btn:hover {
-  transform: translate(-50%, -50%) scale(1.1);
-  box-shadow: 0 0 25px rgba(168, 85, 247, 0.7);
-}
+.play-btn { width: 64px; height: 64px; border-radius: 50%; background: var(--gradient); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 16px; animation: playPulse 1.5s ease-in-out infinite; }
+
 /* hide state */
 .play-btn.hide {
   opacity: 0;
