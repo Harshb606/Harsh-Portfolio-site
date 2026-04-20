@@ -4,7 +4,7 @@
 ================================================================ */
 
 /* ── Variables ── */
-/*:root {
+:root {
   --bg-base:       #050508;
   --bg-deep:       #08080f;
   --bg-card:       rgba(255,255,255,0.04);
@@ -29,7 +29,7 @@
   --radius:        16px;
   --radius-lg:     24px;
   --transition:    0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}*/
+}
 
 /* ── Reset ── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
