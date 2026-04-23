@@ -393,6 +393,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 .scroll-line {
   width: 1px;
   height: 48px;
+  padding-top: 40px;
   background: linear-gradient(to bottom, var(--purple-light), transparent);
   animation: scrollPulse 2s ease-in-out infinite;
 }
