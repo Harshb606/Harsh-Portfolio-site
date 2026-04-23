@@ -981,7 +981,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 
 @media (max-width: 768px) {
   :root { --nav-h: 64px; }
-  .section { padding: 80px 0; }
+  .section { padding: 40px 0; }
 
   .nav-links, .btn-cta { display: none; }
   .hamburger { display: flex; }
