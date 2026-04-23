@@ -374,7 +374,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   transform: translateY(-2px);
 }
 .hero-scroll-hint {
-  padding-top: 60px;
+  padding-top: 100px;
    margin: 40px 10px;
   position: absolute;
   bottom: 40px;
